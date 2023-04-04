@@ -1,0 +1,10 @@
+# This program prints the Fibonacci sequence up to a given number
+
+n = int(input("Enter a number: ")) # Get input from user
+
+fibonacci = [0, 1] # Initialize the Fibonacci sequence with the first two numbers
+
+while fibonacci[-1] < n: # Continue adding Fibonacci numbers until we reach n
+    fibonacci.append(fibonacci[-1] + fibonacci[-2])
+
+print(f"The Fibonacci sequence up to {n} is {fibonacci[:-1]}") # Print the sequence to the console
