@@ -1,0 +1,27 @@
+// This program checks if a number is prime
+
+import java.util.Scanner;
+
+public class PrimeChecker {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); // Initialize scanner object to get input from user
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt(); // Get input from user
+
+        boolean isPrime = true; // Assume the number is prime unless proven otherwise
+
+        for (int i = 2; i < number; i++) { // Check if the number is divisible by any number from 2 to number-1
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) { // If the number is prime, print a message to the console
+            System.out.println(number + " is prime");
+        } else { // If the number is not prime, print a message to the console
+            System.out.println(number + " is not prime");
+        }
+    }
+}
